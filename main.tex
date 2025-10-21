@@ -1,0 +1,192 @@
+% Chaebeom Sheen — Enhanced Curriculum Vitae
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{array}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{titlesec}
+
+% Color scheme
+\definecolor{primarycolor}{RGB}{0, 102, 204}
+\definecolor{accentcolor}{RGB}{51, 51, 51}
+\definecolor{sectioncolor}{RGB}{70, 130, 180}
+
+% Section formatting
+\titleformat{\section}
+  {\color{sectioncolor}\Large\bfseries}
+  {}{0em}{}[\color{sectioncolor}\titlerule]
+\titlespacing{\section}{0pt}{1.2em}{0.6em}
+
+% Custom commands
+\newcommand{\cvsection}[1]{%
+  \vspace{1em}
+  {\color{sectioncolor}\Large\bfseries #1}
+  \vspace{0.2em}
+  {\color{sectioncolor}\hrule height 1.5pt}
+  \vspace{0.5em}
+}
+
+\newcommand{\years}[1]{{\color{gray}\textit{#1}}}
+\newenvironment{cvitems}{\begin{itemize}[leftmargin=1.5em, itemsep=0.3em, topsep=0.3em]}{\end{itemize}}
+
+\newcommand{\role}[2]{%
+  \textbf{\large #1}\hfill\years{#2}\\[0.1em]
+}
+
+\newcommand{\place}[1]{%
+  {\color{primarycolor}\textit{#1}}\\[0.3em]
+}
+
+\begin{document}
+
+% Header
+\begin{center}
+  {\Huge\bfseries\color{accentcolor} Chaebeom Sheen}
+  
+  \vspace{0.5em}
+  {\large MD Candidate \& Computational Researcher}
+  
+  \vspace{0.3em}
+  {\color{gray} Seoul National University}
+  
+  \vspace{0.8em}
+  \begin{tabular}{c c c}
+    \faGithub\; \href{https://github.com/Cauch-BS}{Cauch-BS} &
+    \faLinkedin\; \href{https://www.linkedin.com/in/qmedim}{LinkedIn} &
+    \faGraduationCap\; \href{https://scholar.google.com/citations?user=PrT4BHoAAAAJ}{Google Scholar} \\
+  \end{tabular}
+  
+  \vspace{0.3em}
+  \faEnvelope\; \texttt{cauchybs@snu.ac.kr} \quad|\quad \faMapMarker*\; Seoul, Republic of Korea
+\end{center}
+
+\vspace{0.5em}
+
+\cvsection{Profile}
+Medical student and computational biologist passionate about building accessible scientific tools. I bridge life science research with modern software engineering—developing reproducible, cloud-deployed platforms that make complex modeling approachable to non-computational users. Experienced in full-stack web design, containerized scientific workflows, and GPU-accelerated simulation backends.
+
+\cvsection{Education}
+\role{M.D. Candidate, College of Medicine}{2020–present}
+\place{Seoul National University, Seoul, Republic of Korea}
+\begin{cvitems}
+  \item Clinical training combined with translational research in computational medicine and radiotherapy optimization
+  \item Coursework and clinical rotations across internal medicine, surgery, obstetrics/gynecology, neurology, and radiology
+\end{cvitems}
+
+\cvsection{Research \& Development Experience}
+\role{Research Assistant}{2024–present}
+\place{CHANGlab, Seoul National University}
+\begin{cvitems}
+  \item Developed \textbf{VaxPress}, a machine-learning pipeline for mRNA codon optimization
+  \item Designed and deployed cloud-native infrastructure using \textbf{Kubernetes (GKE)}, \textbf{Flask APIs}, and \textbf{PostgreSQL} for scalable distributed computation
+  \item Focused on bridging ML models and biological design tools into interactive web platforms
+\end{cvitems}
+
+\vspace{0.5em}
+
+\role{Research Member}{2023}
+\place{Heavy Ion Medical Accelerator Project Group, Seoul National University}
+\begin{cvitems}
+  \item Studied optimization of carbon-ion radiotherapy planning, integrating computational models and patient-specific anatomy
+\end{cvitems}
+
+\cvsection{Selected Projects}
+\begin{cvitems}
+  \item \textbf{\color{primarycolor}PaperSorter} — Open-source academic recommender platform integrating \textbf{Python}, \textbf{PostgreSQL}, \texttt{pgvector}, and \textbf{XGBoost}. Built collaborative backend with Slack API and containerized CI/CD
+  
+  \item \textbf{\color{primarycolor}NABIResearch Website} — Interactive group web portal built with \textbf{AstroJS}, \textbf{React}, and \textbf{TailwindCSS}, integrating dynamic search, Markdown-driven posts, and deployment via Cloudflare
+  
+  \item \textbf{\color{primarycolor}(Undisclosed Cloud Optimization Engine)} — Distributed backend for mRNA design using \textbf{GKE}, \textbf{Docker}, \textbf{Python microservices}, and \textbf{RabbitMQ}
+  
+  \item \textbf{\color{primarycolor}Personal HPC Projects} — Configured GPU-enabled containers and custom clusters for RNA secondary-structure prediction using \textbf{CUDA}, \textbf{JAX}
+\end{cvitems}
+
+
+\cvsection{Technical Skills}
+\noindent
+\begin{minipage}[t]{3.5cm}
+\textbf{\color{accentcolor}Programming}
+\end{minipage}%
+\begin{minipage}[t]{12cm}
+Python, TypeScript, Julia, R, Bash, Git
+\end{minipage}
+
+\vspace{0.3em}
+\noindent
+\begin{minipage}[t]{3.5cm}
+\textbf{\color{accentcolor}Web Stack}
+\end{minipage}%
+\begin{minipage}[t]{12cm}
+Flask, FastAPI, AstroJS, React, TailwindCSS
+\end{minipage}
+
+\vspace{0.3em}
+\noindent
+\begin{minipage}[t]{3.5cm}
+\textbf{\color{accentcolor}ML/Data}
+\end{minipage}%
+\begin{minipage}[t]{12cm}
+PyTorch, JAX, scikit-learn, CuPy, NumPy
+\end{minipage}
+
+\vspace{0.3em}
+\noindent
+\begin{minipage}[t]{3.5cm}
+\textbf{\color{accentcolor}Cloud/DevOps}
+\end{minipage}%
+\begin{minipage}[t]{12cm}
+Docker, Kubernetes, Google Cloud (GKE, Cloud Run), PostgreSQL
+\end{minipage}
+
+\cvsection{Publications}
+\begin{itemize}[leftmargin=1.5em, itemsep=0.3em]
+  \item \textbf{Sheen C.}, Lee S., Kim B., Son J., Kim K., Jin H. (2025). Carbon ion radiotherapy optimization techniques for pancreatic cancer accounting for bowel gas variation. \emph{Strahlentherapie und Onkologie}.
+\end{itemize}
+
+
+\cvsection{Technical Skills}
+\noindent
+\begin{minipage}[t]{3.5cm}
+\textbf{\color{accentcolor}Programming}
+\end{minipage}%
+\begin{minipage}[t]{12cm}
+Python, TypeScript, Julia, R, Bash, Git
+\end{minipage}
+
+\vspace{0.3em}
+\noindent
+\begin{minipage}[t]{3.5cm}
+\textbf{\color{accentcolor}Web Stack}
+\end{minipage}%
+\begin{minipage}[t]{12cm}
+Flask, FastAPI, AstroJS, React, TailwindCSS
+\end{minipage}
+
+\vspace{0.3em}
+\noindent
+\begin{minipage}[t]{3.5cm}
+\textbf{\color{accentcolor}ML/Data}
+\end{minipage}%
+\begin{minipage}[t]{12cm}
+PyTorch, JAX, scikit-learn, CuPy, NumPy
+\end{minipage}
+
+\vspace{0.3em}
+\noindent
+\begin{minipage}[t]{3.5cm}
+\textbf{\color{accentcolor}Cloud/DevOps}
+\end{minipage}%
+\begin{minipage}[t]{12cm}
+Docker, Kubernetes, Google Cloud (GKE, Cloud Run), PostgreSQL
+\end{minipage}
+
+\cvsection{Professional Interests}
+Scientific web tools \textbullet\; Computational biology \textbullet\; Bioinformatics infrastructure \textbullet\; Open-source software for medicine \textbullet\; Cloud-native scientific workflows
+
+\cvsection{Languages}
+\textbf{Korean} (native) \quad\textbullet\quad \textbf{English} (professional)
+
+\end{document}
